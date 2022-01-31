@@ -2,23 +2,39 @@
 <header>
     <meta charset="UTF-8">
     <title>Contador JS</title>
-    <link rel="stylesheet" type="text/css" src="../css/contador.css">
-    <script src=""></script>
+    <link rel="stylesheet" type="text/css" href="../css/contador.css">
+    <script src="../js/contador.js"></script>
 </header>
 
 <body>
     <div class="switch-button">
-        <input name="switch-button" type="checkbox" id="switch-label" class="switch-button_checkbox">
+        <input onchange="changeMode()" name="switch-button" type="checkbox" id="switch-label" class="switch-button_checkbox">
         <label for="switch-label" class="switch-button_label"></label>
     </div>
-    <h1> CONTADOR GENÉRICO</h1>
-    <div>
-        <p id="numero">0</p>
-    </div>
-    <section>
-        <button class="count-button">Decrementar</button>
-        <button class="count-button">Resetear</button>
-        <button class="count-button">Incrementar</button>
+    
+    <h1 id="titulo"> CONTADOR GENÉRICO</h1>
+    <table border="3" class="mark" id="player1">
+        <caption>MARCADOR</caption>
+        <tr>
+            <th>&nbsp;</th>
+            <th id ="tituloSet1">Set 1</th>
+            <th id="juego">Juego</th>
+        </tr>
+        <tr>
+            <th>Nadal</th>
+            <td id="j1s1">0</td>
+            <td id="j1j">0</td>
+        </tr>
+        <tr>
+            <th>Medvedev</th>
+            <td id="j2s1">0</td>
+            <td id="j2j">0</td>
+        </tr>
+    </table>
+    <section id ="buttons">
+        <button onclick="restarPuntoJ1()" class="count-button decrease">Decrementar</button>
+        <button class="count-button reset">Resetear</button>
+        <button onclick="sumarPuntoJ1()" class="count-button increase">Incrementar</button>
     </section>
 
 

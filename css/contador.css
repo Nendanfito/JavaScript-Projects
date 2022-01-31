@@ -3,34 +3,78 @@
     color: #f1eded;
 }
 
-.switch-button {
-    display: inline-block;
+#buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20%;
 }
-.switch-button .switch-button__checkbox {
+
+.mark{
+    border-collapse: collapse;
+}
+
+.mark th{
+    padding: 5px;
+    width: 100px;
+}
+
+.count-button{
+    width: 250px;
+    margin-right: 30px;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 20px;
+    border-width: 0.5px;
+    box-shadow: 1px 1px #1f1f1f;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.decrease{
+    border-color: red;
+}
+
+.increase{
+    border-color: rgb(2, 172, 2);
+}
+
+.count-button:hover{
+    cursor: pointer;
+    box-shadow: 0 0;
+}
+
+.switch-button {
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    padding-right: 50px;
+}
+
+.switch-button .switch-button_checkbox {
     display: none;
 }
-.switch-button .switch-button__label {
-    background-color: var(--color-red);
-    width: 5rem;
-    height: 3rem;
-    border-radius: 3rem;
+.switch-button .switch-button_label {
+    background-color: gray;
+    width: 3rem;
+    height: 1.5rem;
+    border-radius: 1.5rem;
     display: inline-block;
     position: relative;
 }
-.switch-button .switch-button__label:before {
+.switch-button .switch-button_label:before {
     transition: .2s;
     display: block;
     position: absolute;
-    width: 3rem;
-    height: 3rem;
-    background-color: var(--color-button);
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: gray;
     content: '';
     border-radius: 50%;
-    box-shadow: inset 0px 0px 0px 1px var(--color-black);
+    box-shadow: inset 0px 0px 0px 1px black;
 }
-.switch-button .switch-button__checkbox:checked + .switch-button__label {
-    background-color: var(--color-green);
+.switch-button .switch-button_checkbox:checked + .switch-button_label {
+    background-color: white;
 }
-.switch-button .switch-button__checkbox:checked + .switch-button__label:before {
+.switch-button .switch-button_checkbox:checked + .switch-button_label:before {
     transform: translateX(2rem);
 }
