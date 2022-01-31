@@ -3,11 +3,18 @@
     color: #f1eded;
 }
 
-#buttons{
+#buttonsJ1{
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 20%;
+}
+
+#buttonsJ2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2%;
 }
 
 .mark{
