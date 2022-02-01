@@ -2,7 +2,7 @@
 <header>
     <meta charset="UTF-8">
     <title>Contador JS</title>
-    <link rel="stylesheet" type="text/css" href="../css/contador.css">
+    <link rel="stylesheet" type="text/css" href="../css/contador.css" id="theme">
     <script src="../js/contador.js"></script>
 </header>
 
@@ -12,37 +12,43 @@
         <label for="switch-label" class="switch-button_label"></label>
     </div>
     
-    <h1 id="titulo"> CONTADOR GENÉRICO</h1>
-    <table border="3" class="mark" id="player1">
-        <caption>MARCADOR</caption>
-        <tr>
-            <th>&nbsp;</th>
-            <th id ="tituloSet1">Set 1</th>
-            <th id="juego">Juego</th>
-        </tr>
-        <tr>
-            <th>Nadal</th>
-            <td id="j1s1" class="j1s1">5</td>
-            <td id="j1j">0</td>
-        </tr>
-        <tr>
-            <th>Medvedev</th>
-            <td class="j2s1" id="j1s2">0</td>
-            <td id="j2j">0</td>
-        </tr>
-    </table>
+    <h1 id="titulo"> MARCADOR AUSTRALIAN OPEN</h1>
+    <img alt="Logo Australian Open" src="https://streamtelly.com/wp-content/uploads/2020/12/Watch-Australian-Open-Live-.png">
     
+
+    <div id="marcador">
+        <table border="3" class="mark">
+            <caption>FINAL</caption>
+            <tr>
+                <th>&nbsp;</th>
+                <th id ="tituloSet1">Set 1</th>
+                <th id="juego">Juego</th>
+            </tr>
+            <tr>
+                <th>Nadal</th>
+                <td id="j1s1" class="j1s1">0</td>
+                <td id="j1j">0</td>
+            </tr>
+            <tr>
+                <th>Medvedev</th>
+                <td class="j2s1" id="j1s2">0</td>
+                <td id="j2j">0</td>
+            </tr>
+        </table>
+    </div>
+
     <section id ="buttonsJ1">
         <button onclick="restarPuntoJ1()" class="count-button decrease">Decrementar J1</button>
-        <button class="count-button reset">Resetear J1</button>
         <button onclick="sumarPuntoJ1()" class="count-button increase">Incrementar J1</button>
     </section>
 
     <section id = buttonsJ2>
         <button onclick="restarPuntoJ2()" class="count-button decrease">Decrementar J2</button>
-        <button class="count-button reset">Resetear J2</button>
         <button onclick="sumarPuntoJ2()" class="count-button increase">Incrementar J2</button>
     </section>
 
+    <button onclick="resetearPartido()" class="count-button reset">Resetear partido</button>
+
+    <p id="copyright">&#169 FERNANDO ANDRÉS GALINDO</p>
 
 </body>

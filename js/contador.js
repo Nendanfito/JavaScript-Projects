@@ -1,8 +1,16 @@
 var set = 1;
 
 function changeMode(){
-    var cuerpoweb = document.body;
-    cuerpoweb.classList.toggle("oscuro");
+    let theme = document.getElementById("theme");
+    if (theme.getAttribute("href") == "../css/contador.css") {
+        theme.href = "../css/contador-dark.css";
+    } else {
+        theme.href = "../css/contador.css";
+    }
+}
+
+function resetearPartido(){
+    location.reload();
 }
 
 function newSet(){
