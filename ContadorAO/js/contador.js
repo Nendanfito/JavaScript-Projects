@@ -1,5 +1,5 @@
 let puntoJ1 = document.querySelector("#j1j");
-const puntoJ2 = document.querySelector("#j2j");
+let puntoJ2 = document.querySelector("#j2j");
 let set = 1;
 
 function changeMode(){
