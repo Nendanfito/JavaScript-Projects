@@ -1,4 +1,6 @@
-var set = 1;
+let puntoJ1 = document.querySelector("#j1j");
+let puntoJ2 = document.querySelector("#j2j");
+let set = 1;
 
 function changeMode(){
     let theme = document.getElementById("theme");
@@ -33,11 +35,8 @@ function newSet(){
 }
 
 function sumarPuntoJ1(){
-    if (set > 3) alert("¡¡ENHORABUENA RAFA NADAL POR TU 21 GRAND SLAM!!");
-    var puntoJ1 = document.getElementById("j1j");
-    var puntoJ2 = document.getElementById("j2j");
-    var setJ1 = document.querySelector(".j1s"+set);
-    var setJ2 = document.querySelector(".j2s"+set);
+    let setJ1 = document.querySelector(".j1s"+set);
+    let setJ2 = document.querySelector(".j2s"+set);
     if(puntoJ1.textContent == 0){
         puntoJ1.textContent = 15;
     } else if(puntoJ1.textContent == 15){ 
@@ -62,8 +61,6 @@ function sumarPuntoJ1(){
 }
 
 function restarPuntoJ1(){
-    var puntoJ1 = document.getElementById("j1j");
-    var puntoJ2 = document.getElementById("j2j");
     if(puntoJ1.textContent == 15){
         puntoJ1.textContent = 0;
     } else if(puntoJ1.textContent == 30){ 
@@ -76,10 +73,8 @@ function restarPuntoJ1(){
 }
 
 function sumarPuntoJ2(){
-    var puntoJ1 = document.getElementById("j1j");
-    var puntoJ2 = document.getElementById("j2j");
-    var setJ2 = document.querySelector(".j2s"+set);
-    var setJ1 = document.querySelector(".j1s"+set);
+    let setJ1 = document.querySelector(".j1s"+set);
+    let setJ2 = document.querySelector(".j2s"+set);
     if(puntoJ2.textContent == 0){
         puntoJ2.textContent = 15;
     } else if(puntoJ2.textContent == 15){ 
@@ -103,8 +98,6 @@ function sumarPuntoJ2(){
 }
 
 function restarPuntoJ2(){
-    var puntoJ2 = document.getElementById("j1j");
-    var puntoJ2 = document.getElementById("j2j");
     if(puntoJ2.textContent == 15){
         puntoJ2.textContent = 0;
     } else if(puntoJ2.textContent == 30){ 
@@ -115,3 +108,5 @@ function restarPuntoJ2(){
         puntoJ2.textContent = "40";
     }
 }
+
+
